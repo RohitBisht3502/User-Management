@@ -40,20 +40,16 @@ The Controller layer is responsible for handling incoming HTTP requests and dele
    This endpoint creare employee and get employee by using user id.
 
    ```java
-  @GetMapping("users")
+    @GetMapping("users")
     public List<User> getAllUser()
     {
       return  userService.getAllUser();
     }
-
-
     @PostMapping("users")
     public String addUsers(@RequestBody @Valid List<User> myUsers)
     {
         return  userService.addUsers(myUsers);
     }
-
-    //update password of the user
 
     @PutMapping("user/password")
     public String updatePasswordByUserId(@RequestBody @Valid PasswordChanger passwordChanger)
